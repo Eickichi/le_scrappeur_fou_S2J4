@@ -38,10 +38,31 @@ def info_depute
         n = n + 1
     end
 
-    puts table
+    #puts table
+    return table
  end
 
 info_depute
+
+#pour le rspec
+
+def rspec1
+    table = info_depute
+    size = table.size
+    puts size
+    return size
+end
+
+rspec1
+
+def rspec2(n)
+    table = info_depute
+    array = table[n]
+    puts table[n]
+    return array
+end
+
+rspec2(20)
 
 # brouillon pour récupérer les infos
 

@@ -6,7 +6,7 @@ def page_val_d_oise
     return page0
 end
 
-def get_townhall_urls
+def get_townhall
     page0 = page_val_d_oise
 
     page_town = page0.css('a.lientxt')
@@ -36,10 +36,25 @@ def get_townhall_urls
     end
 
     puts table
+    return table
 
 end
 
-get_townhall_urls
+get_townhall
+
+#pour le rspec
+
+def rspec1
+    table = get_townhall
+    size = table.size
+    return size
+end
+
+def rspec2(n)
+    table = get_townhall
+    array = table[n]
+    return array
+end
 
 #Brouillon des étapes précédentes pour récumérer le mail d'une ville
 def page_lien
