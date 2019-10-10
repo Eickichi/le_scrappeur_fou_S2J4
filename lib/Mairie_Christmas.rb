@@ -1,4 +1,3 @@
-require 'rubygem'
 require 'nokogiri'
 require 'open-uri'
 

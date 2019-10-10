@@ -1,5 +1,7 @@
-require 'rubygem'
 require 'nokogiri'
 require 'open-uri'
 
-page = Nokogiri::HTML(open("lien"))
+def page_lien
+    page = Nokogiri::HTML(open("https://coinmarketcap.com/all/views/all/"))
+    return page
+end 
