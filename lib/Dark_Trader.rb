@@ -33,8 +33,20 @@ def dark_trader
         n = n + 1
     end
     
-   puts table
+    puts table
+    return table
+end
 
+def rspec1
+    table = dark_trader
+    size = table.size
+    return size
+end
+
+def rspec2(n)
+    table = dark_trader
+    array = table[n]
+    return array
 end
 
 dark_trader
