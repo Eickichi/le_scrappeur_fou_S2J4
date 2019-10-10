@@ -12,29 +12,31 @@ def get_townhall_urls
     page_town = page0.css('a.lientxt')
     nbr_town = page_town.length
     n = 0
-    table_name = []
-    table_mail = []
+    nn = 0
+    table = []
 
     nbr_town.times do
 
+        #Le nom de chaque ville
         name_town = page_town[n].text
-        table_name << name_town
 
+        #Le lien vers la page d'accueil de chaque ville
         town = page_town[n]["href"]
         n = n + 1
         lien_town = "https://www.annuaire-des-mairies.com/#{town}"
 
-        #puts "#{name_town} : #{lien_town}"
-
-        #récupérer le mail de chaque ville
+        #Le mail de chaque ville
         page2 = Nokogiri::HTML(open("#{lien_town}"))
-
         mail2 = page2.xpath('/html/body/div/main/section[2]/div/table/tbody/tr[4]/td[2]').text
-        table_mail << mail2
+ 
+        #pour tout ajouter dans un hash, et le hash dans une table
+        hash = {}
+        hash["#{name_town}"] = mail2
+        table << hash
     end
 
-    puts table_name
-    puts table_mail
+    puts table
+
 end
 
 get_townhall_urls
