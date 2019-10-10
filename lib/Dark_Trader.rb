@@ -33,7 +33,7 @@ def dark_trader
         n = n + 1
     end
     
-   # puts table
+   puts table
 
 end
 
