@@ -54,16 +54,12 @@ def rspec1
     return size
 end
 
-rspec1
-
 def rspec2(n)
     table = info_depute
     array = table[n]
     puts table[n]
     return array
 end
-
-rspec2(20)
 
 # brouillon pour récupérer les infos
 
