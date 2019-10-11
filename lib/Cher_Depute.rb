@@ -28,6 +28,7 @@ def info_depute
         last_name = name[2]
         mail = page0.xpath('/html/body/div/div[3]/div/div/div/section[1]/div/article/div[3]/div/dl/dd[4]/ul/li[2]/a').text
 
+        #pour tout ranger dans le hash
         hash = {}
         hash["first_name"] = first_name
         hash["last_name"] = last_name
@@ -38,7 +39,7 @@ def info_depute
         n = n + 1
     end
 
-    #puts table
+    puts table
     return table
  end
 
